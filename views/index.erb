@@ -2,8 +2,29 @@
 <html>
 <head>
 	<title>Caesar Cipher Reloaded</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
+
+	<div class="container">
+		<form>
+			<input type="text" name="unencrypted_word" placeholder="Type word to encrypt">
+			<input type="number" name="shift_number" step="1" min="0">
+			<input type="submit" value="Submit">
+		</form>
+
+		<div class="response">
+			<p><%= unencrypted_word%></p>
+			<div class="shift-arrow">
+				<p>||</p>
+				<p>||</p>
+				<p><%= shift_number %></p>
+				<p>||</p>
+				<p>V</p>
+			</div>
+			<p><%=encrypted_word%></p>
+		</div>
+	</div>	
 
 </body>
 </html>

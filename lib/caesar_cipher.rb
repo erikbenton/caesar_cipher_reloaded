@@ -1,3 +1,22 @@
+require 'sinatra'
+require 'sinatra/reloaded'
+
+get '/' do
+
+	encrypted_word = ""
+	if params("unencrypted_word") && params("shift_number")
+		unencrypted_word = params("unencrypted_word")
+		shift_number = params("shift_number").to_i
+		encrypted_word = caesar_cipher_reloaded(encrypted_word, shift_number)
+	else
+		encrypted_word = "Please enter valid word and shift number"
+	end
+
+	erb :index, :locals => {:encrypted_word => encrypted_word}
+
+end
+
+
 def caesar_cipher_reloaded(phrase, shift)
 	result = ""
 	phrase.each_char do |letter|
