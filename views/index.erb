@@ -14,15 +14,12 @@
 		</form>
 
 		<div class="response">
-			<p><%= unencrypted_word%></p>
-			<div class="shift-arrow">
-				<p>||</p>
-				<p>||</p>
-				<p><%= shift_number %></p>
-				<p>||</p>
-				<p>V</p>
-			</div>
+			<% if shift_number.is_a? Integer %>
+			<p><%= unencrypted_word%> ---> <%=encrypted_word%></p>
+			<p>(shifted <%= shift_number %> letters)</p>
+			<% else %>
 			<p><%=encrypted_word%></p>
+			<% end %>
 		</div>
 	</div>	
 

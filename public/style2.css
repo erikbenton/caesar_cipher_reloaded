@@ -1,0 +1,25 @@
+body {
+	background-color: #74AFAD;
+}
+
+.container {
+	width: 50%;
+	margin: 10px auto;
+	text-align: center;
+	background-color: #558C89;
+}
+
+.response {
+	text-align: center;
+	background-color: #ECECEA;
+}
+
+.shift-arrow p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+input[type='submit'] {
+	color: #FFF;
+	background-color: #D9853B;
+}
